@@ -1,0 +1,40 @@
+.rps{
+    display: flex;
+    flex-direction: row;
+}
+
+img{
+    width: 300px;
+}
+
+.paper{
+    margin-right: 150px;
+}
+.scissors{
+    width:40%;
+    margin-top: 10px;
+    margin-right: 200px;
+}
+.rock{
+    width:100%;
+    margin-left: 100px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-evenly;
+    border-radius: 10px;
+}
+
+button{
+    width: 125px;
+    height: 50px;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+body{
+    background-color: rgb(211, 211, 211);
+}
