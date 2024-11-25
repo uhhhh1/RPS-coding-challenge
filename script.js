@@ -68,15 +68,15 @@ let scissorsFunction = () => {
         computerChoice.textContent = "Computer's Choice: " + randomChoice;
         if (randomChoice === "SCISSORS") {
             score += 0;
-            scoreContainer.textContent = "Score: " +score;
+            scoreContainer.textContent = " Player Score: " +score;
         }
         if (randomChoice === "PAPER") {
             score += 1;
-            scoreContainer.textContent = "Score: " +score;
+            scoreContainer.textContent = "Player Score: " +score;
         }
         if (randomChoice === "ROCK") {
             score += -1;
-            scoreContainer.textContent = "Score: " +score;
+            scoreContainer.textContent = "Player Score: " +score;
         }
         endgameFunction();
     });
@@ -85,12 +85,19 @@ let scissorsFunction = () => {
 scissorsFunction();
 
 let endgameFunction = () => {
-    if(score > 2){
-        scoreContainer.textContent = "Final Score: " + score;
-        endMessage.textContent = "Congradulations, you won!"
+    if(score > 0){
+        scoreContainer.textContent = "Player Score: " + score;
+        endMessage.textContent = "You Won This Round, reset to play again!"
     }
-    if(score < -2){
-        scoreContainer.textContent = "Final Score : " + score;
-        endMessage.textContent = "You lost."
+    if(score < 0){
+        scoreContainer.textContent = "Player Score : " + score;
+        endMessage.textContent = "You lost this round, reset to play again."
     }
 }
+
+
+const refreshButton = document.getElementById("refreshButton");
+
+refreshButton.addEventListener("click", function() {
+  location.reload();
+});
